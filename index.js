@@ -1,5 +1,10 @@
 function isPalindrome(word) {
-  return word === word.split("").reverse().join("");
+  const reversedWord = word.split("").reverse().join("");
+  if (word === reversedWord) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
@@ -13,6 +18,12 @@ function isPalindrome(word) {
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("dad"));
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("mom"));
+
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
